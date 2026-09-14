@@ -14,10 +14,21 @@ const Signup = () => {
     username: ""
   })
 
-  const handleInputChange = () => {
-    console.log("fn working");
-    
-  } 
+  const handleInputChange = (value, key) => {
+    console.log("fn working...", value);
+
+    setForm((prev) => ({ ...prev, [key]: value }))
+
+  }
+
+  const signupHandler = () => {
+
+  }
+
+  const signupWithGoogleHandler = () => {
+
+  }
+
 
   return (
     <Box sx={{
@@ -35,9 +46,9 @@ const Signup = () => {
         <h1 className='font-bold text-3xl text-center mb-3'>Signup page</h1>
 
         <Box>
-          <Input handler={handleInputChange} label={"Enter Your Username"} type={"text"} />
-          <Input handler={handleInputChange} label={"Enter Your email"} type={"email"} />
-          <Input handler={handleInputChange} label={"Enter Your password"} type={"password"} />
+          <Input handler={handleInputChange} label={"Enter Your Username"} type={"username"} value={form.username} />
+          <Input handler={handleInputChange} label={"Enter Your email"} type={"email"} value={form.Email} />
+          <Input handler={handleInputChange} label={"Enter Your password"} type={"password"} value={form.Password} />
           <Box className="flex justify-center items-center mb-3">
             <GoogleButtons icon={<GoogleIcon />} title={"Signup With Google"}></GoogleButtons>
           </Box>
