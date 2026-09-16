@@ -8,7 +8,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
 import { doc, setDoc } from 'firebase/firestore'
-import { auth } from '../../firebase/config'
+import { auth, db } from '../../firebase/config'
 
 
 export const saveDataIntoDB = async (name = "", data) => {
@@ -18,7 +18,8 @@ export const saveDataIntoDB = async (name = "", data) => {
     await setDoc(doc(db, "users", data.uid), {
       email: data.email,
       name: data.displayName ? data.displayName : name,
-      photoUrl: data.photoURL ? data.photoURL : ""
+      photoUrl: data.photoURL ? data.photoURL : "",
+      role: "user"
     })
 
   } catch (error) {

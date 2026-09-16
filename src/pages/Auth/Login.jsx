@@ -4,11 +4,11 @@ import Input from '../../Components/Input'
 import Button from '../../Components/Button'
 // import GoogleButtons from '../../Components/ContinueWithGoogleBtn'
 // import GoogleIcon from '@mui/icons-material/Google';
-import { auth } from '../../firebase/Config'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom'
 import GoogleButtons from '../../Components/ContinueWithGoogleBtn'
+import { auth } from '../../firebase/config'
 // import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 
