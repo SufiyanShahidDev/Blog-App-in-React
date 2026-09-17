@@ -1,7 +1,5 @@
 import { Box, Paper, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import Input from '../../Components/Input'
-import Button from '../../Components/Button'
 // import GoogleButtons from '../../Components/ContinueWithGoogleBtn'
 // import GoogleIcon from '@mui/icons-material/Google';
 import { signInWithEmailAndPassword } from 'firebase/auth'
@@ -9,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom'
 import GoogleButtons from '../../Components/ContinueWithGoogleBtn'
 import { auth } from '../../firebase/config'
+import Input from '../../components/Input';
 // import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 
@@ -102,8 +101,8 @@ const Login = () => {
           <h1 className='font-bold text-3xl text-center mb-3'>Login page</h1>
 
           <Box>
-            <Input handler={handleInputChange} label={"Enter Your email"} type={"email"} value={form.email} />
-            <Input handler={handleInputChange} label={"Enter Your password"} type={"password"} value={form.password} />
+            <Input handler={handleInputChange} id={"email"} label={"Enter Your email"} type={"email"} value={form.email} />
+            <Input handler={handleInputChange} id={"password"} label={"Enter Your password"} type={"password"} value={form.password} />
             <Box className="flex justify-center items-center mb-3">
               <GoogleButtons title={"Continue With Google"} />
             </Box>

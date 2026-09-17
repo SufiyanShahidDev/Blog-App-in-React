@@ -1,14 +1,14 @@
 
 import { Box, Paper, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import Input from '../../Components/Input'
-import Button from '../../Components/Button'
 import GoogleButtons from '../../Components/ContinueWithGoogleBtn'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
 import { doc, setDoc } from 'firebase/firestore'
 import { auth, db } from '../../firebase/config'
+import Input from '../../components/Input'
+import BasicButtons from '../../components/Button'
 
 
 export const saveDataIntoDB = async (name = "", data) => {
@@ -104,7 +104,8 @@ const Signup = () => {
             <Input
               handler={handleInputChange}
               label={"Enter Your Username"}
-              type={"username"}
+              type={"text"}
+              id="username"
               value={form.username}
             />
 
@@ -112,6 +113,7 @@ const Signup = () => {
               handler={handleInputChange}
               label={"Enter Your email"}
               type={"email"}
+              id="email"
               value={form.email}
             />
 
@@ -119,6 +121,7 @@ const Signup = () => {
               handler={handleInputChange}
               label={"Enter Your password"}
               type={"password"}
+              id="password"
               value={form.password}
             />
 
@@ -128,7 +131,7 @@ const Signup = () => {
 
             <Box className="flex justify-center items-center mb-3">
 
-              <Button
+              <BasicButtons
                 handler={signupHandler}
                 title={"Signup"}
               />

@@ -3,12 +3,12 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { uploadImageToCloudinary } from "../helper/helper.js";
+import Input from "../components/Input";
+import ButtonCmp from "../components/Button";
 import { db } from "../firebase/config.js";
 import { addDoc, collection, doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { userId } from "./ProtectedRoute.jsx";
-import Input from "./Input.jsx";
-import Button from "./Button.jsx";
+import { uploadImageToCloudinary } from "../../helper/helper.js";
 
 const style = {
   position: "absolute",
@@ -42,15 +42,15 @@ export default function CreateBlogModal() {
     try {
       await addDoc(collection(db, "blogs"), {
 
-        blogImgUrl : url,
-        title : data.title,
+        blogImgUrl: url,
+        title: data.title,
         description: data.description,
-        authorId : userId,
+        authorId: userId,
         createdAt: serverTimestamp(),
       });
 
       console.log("blog created!");
-      
+
     } catch (error) {
       console.log(error);
     }
@@ -88,21 +88,21 @@ export default function CreateBlogModal() {
             type="text"
             id="title"
             handler={handleInputChange}
-            // value={blogForm.title}
+          // value={blogForm.title}
           />
           <Input
             label={"Blog Description"}
             type="text"
             id="description"
             handler={handleInputChange}
-            // value={blogForm.description}
+          // value={blogForm.description}
           />
           <Input
             label={"Choose File"}
             type="file"
             id="file"
             handler={handleInputChange}
-            // value={blogForm.file}
+          // value={blogForm.file}
           />
 
           <ButtonCmp handler={postBlogHandler} title="Create Blog" />
