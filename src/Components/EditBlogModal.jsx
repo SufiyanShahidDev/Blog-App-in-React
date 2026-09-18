@@ -41,16 +41,56 @@ export default function EditBlogModal({
     }));
   };
 
+  //   try {
+  //     let imgUrl = blogForm.file;
+
+  //     // If user selected a new image
+  //     if (blogForm.file instanceof File) {
+  //       imgUrl = await uploadImageToCloudinary(blogForm.file);
+  //     }
+
+  //     // Get current logged-in user
+  //     const userId = auth.currentUser?.uid;
+
+  //     if (!userId) {
+  //       console.log("User is not logged in");
+  //       return;
+  //     }
+
+  //     await setDoc(
+  //       doc(db, "blogs", id),
+  //       {
+  //         title: blogForm.title,
+  //         description: blogForm.description,
+  //         blogImgUrl: imgUrl,
+  //         createdAt: serverTimestamp(),
+  //         authorId: userId,
+  //       },
+  //       {
+  //         merge: true,
+  //       }
+  //     );
+
+  //     console.log("blog updated successfully");
+
+  //     handleClose();
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
+
   const updateBlogHandler = async (id) => {
     try {
       let imgUrl = blogForm.file;
 
-      // If user selected a new image
+      console.log("File before upload:", blogForm.file);
+
       if (blogForm.file instanceof File) {
         imgUrl = await uploadImageToCloudinary(blogForm.file);
+
+        console.log("New Cloudinary URL:", imgUrl);
       }
 
-      // Get current logged-in user
       const userId = auth.currentUser?.uid;
 
       if (!userId) {
@@ -72,11 +112,11 @@ export default function EditBlogModal({
         }
       );
 
-      console.log("blog updated successfully");
-
+      console.log("Blog updated successfully");
       handleClose();
+
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
   };
 
