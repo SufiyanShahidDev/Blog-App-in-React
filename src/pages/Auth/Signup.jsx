@@ -1,14 +1,14 @@
 
 import { Box, Paper, Typography } from '@mui/material'
-import React, { useState } from 'react'
-import GoogleButtons from '../../components/ContinueWithGoogleBtn'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { ToastContainer, toast } from 'react-toastify'
-import { Link } from 'react-router-dom'
 import { doc, setDoc } from 'firebase/firestore'
-import { auth, db } from '../../firebase/config.js'
-import Input from '../../components/Input'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify'
 import BasicButtons from '../../components/Button'
+import GoogleButtons from '../../components/ContinueWithGoogleBtn'
+import Input from '../../components/Input'
+import { auth, db } from '../../firebase/config.js'
 
 
 export const saveDataIntoDB = async (name = "", data) => {

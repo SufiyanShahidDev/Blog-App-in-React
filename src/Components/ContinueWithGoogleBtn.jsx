@@ -1,10 +1,10 @@
+import GoogleIcon from '@mui/icons-material/Google';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import { toast } from 'react-toastify';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import GoogleIcon from '@mui/icons-material/Google';
-import { saveDataIntoDB } from '../pages/Auth/Signup';
+import { toast } from 'react-toastify';
 import { auth } from '../firebase/config.js';
+import { saveDataIntoDB } from '../pages/Auth/Signup';
 
 
 export default function GoogleButtons({ title }) {

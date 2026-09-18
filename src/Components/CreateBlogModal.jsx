@@ -1,14 +1,14 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import Typography from "@mui/material/Typography";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import * as React from "react";
 import { auth, db } from "../firebase/config.js";
-import { addDoc, collection, doc, serverTimestamp, setDoc } from "firebase/firestore";
 // import { userId } from "./ProtectedRoute.jsx";
 import { uploadImageToCloudinary } from "../../helper/helper.js";
-import Input from "./Input.jsx";
 import BasicButtons from "./Button.jsx";
+import Input from "./Input.jsx";
 
 const style = {
   position: "absolute",

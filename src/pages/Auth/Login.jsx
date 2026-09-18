@@ -1,14 +1,14 @@
-import { Box, Paper, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import { Box, Paper, Typography } from '@mui/material';
+import { useState } from 'react';
 // import GoogleButtons from '../../components/ContinueWithGoogleBtn'
 // import GoogleIcon from '@mui/icons-material/Google';
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import { Link } from 'react-router-dom'
-import GoogleButtons from '../../components/ContinueWithGoogleBtn'
-import { auth } from '../../firebase/config.js'
-import Input from '../../components/Input';
 import BasicButtons from '../../components/Button';
+import GoogleButtons from '../../components/ContinueWithGoogleBtn';
+import Input from '../../components/Input';
+import { auth } from '../../firebase/config.js';
 // import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 

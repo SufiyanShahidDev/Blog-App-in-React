@@ -2,13 +2,13 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
-import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import * as React from "react";
 
-import ButtonCmp from "./Button.jsx";
-import Input from "./Input.jsx";
 import { uploadImageToCloudinary } from "../../helper/helper.js";
 import { auth, db } from "../firebase/config.js";
+import ButtonCmp from "./Button.jsx";
+import Input from "./Input.jsx";
 
 const style = {
   position: "absolute",

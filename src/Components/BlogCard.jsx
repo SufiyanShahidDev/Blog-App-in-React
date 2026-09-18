@@ -13,9 +13,9 @@ import { red } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 import * as React from "react";
 
-import { doc, deleteDoc, getDoc } from "firebase/firestore";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import { deleteDoc, doc, getDoc } from "firebase/firestore";
 
 import { onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "../firebase/config.js";
