@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import GoogleIcon from '@mui/icons-material/Google';
 import { saveDataIntoDB } from '../pages/Auth/Signup';
-import { auth } from '../firebase/config';
+import { auth } from '../firebase/config.js';
 
 
 export default function GoogleButtons({ title }) {

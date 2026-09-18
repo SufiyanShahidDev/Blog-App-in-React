@@ -6,7 +6,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
 import { doc, setDoc } from 'firebase/firestore'
-import { auth, db } from '../../firebase/config'
+import { auth, db } from '../../firebase/config.js'
 import Input from '../../components/Input'
 import BasicButtons from '../../components/Button'
 

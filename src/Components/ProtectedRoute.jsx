@@ -8,43 +8,6 @@ const ProtectedRoute = ({ children }) => {
     const [loading, setLoading] = useState(true);
     // const navigate = useNavigate();
 
-    //   const getUserData = async () => {
-    //     try {
-    //       onAuthStateChanged(auth, (user) => {
-    //         if (user) {
-    //           // User is signed in, see docs for a list of available properties
-    //           // https://firebase.google.com/docs/reference/js/auth.user
-    //           const uid = user.uid;
-    //           setExistUser(user);
-
-    //           //   console.log(user);
-
-    //           // ...
-    //         } else {
-    //           // User is signed out
-    //           // ...
-
-    //           console.log("user nhii haii..");
-    //           setExistUser(null);
-    //         }
-
-    //         setLoading(false);
-
-    //        if(existUser){
-    //         console.log("jani user milgaya..");
-
-    //        }else {
-    //         console.log("user nhi hai..");
-
-    //        }
-    //       });
-    //     } catch (error) {
-    //       console.log(error.message);
-    //     }
-    //   };
-
-
-
     const getUser = () => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
