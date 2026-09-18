@@ -3,12 +3,12 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import Input from "../components/Input";
-import ButtonCmp from "../components/Button";
 import { auth, db } from "../firebase/config.js";
 import { addDoc, collection, doc, serverTimestamp, setDoc } from "firebase/firestore";
 // import { userId } from "./ProtectedRoute.jsx";
 import { uploadImageToCloudinary } from "../../helper/helper.js";
+import Input from "./Input.jsx";
+import BasicButtons from "./Button.jsx";
 
 const style = {
   position: "absolute",
@@ -113,7 +113,7 @@ export default function CreateBlogModal() {
           // value={blogForm.file}
           />
 
-          <ButtonCmp handler={postBlogHandler} title="Create Blog" />
+          <BasicButtons handler={postBlogHandler} title="Create Blog" />
         </Box>
       </Modal>
     </div>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { auth } from '../../firebase/config.js';
 import { onAuthStateChanged } from 'firebase/auth';
-import Navbar from '../../Components/Navbar';
-import CreateBlogModal from '../../Components/CreateBlogModal';
+import Navbar from '../../components/Navbar.jsx';
+import CreateBlogModal from '../../components/CreateBlogModal.jsx';
 
 const Blog = () => {
   const [user, setUser] = useState(null)
@@ -38,7 +38,8 @@ const Blog = () => {
 
       <Navbar user={user} />
 
-      <CreateBlogModal />
+      <CreateBlogModal
+       />
       
     </>
 

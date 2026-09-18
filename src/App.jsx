@@ -5,7 +5,7 @@ import Signup from './pages/Auth/Signup'
 import Login from './pages/Auth/Login'
 import Home from './pages/Dashboard/Home'
 import Blog from './pages/Dashboard/Blog'
-import ProtectedRoute from './Components/ProtectedRoute'
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
 

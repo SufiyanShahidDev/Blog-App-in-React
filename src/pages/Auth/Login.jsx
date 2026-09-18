@@ -1,13 +1,14 @@
 import { Box, Paper, Typography } from '@mui/material'
 import React, { useState } from 'react'
-// import GoogleButtons from '../../Components/ContinueWithGoogleBtn'
+// import GoogleButtons from '../../components/ContinueWithGoogleBtn'
 // import GoogleIcon from '@mui/icons-material/Google';
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom'
-import GoogleButtons from '../../Components/ContinueWithGoogleBtn'
+import GoogleButtons from '../../components/ContinueWithGoogleBtn'
 import { auth } from '../../firebase/config'
 import Input from '../../components/Input';
+import BasicButtons from '../../components/Button';
 // import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 
@@ -20,7 +21,7 @@ const Login = () => {
     password: "",
   })
 
-  const handleInputChange = (value, key) => {
+  const handleInputChange = (key, value) => {
     console.log("fn working...", value);
 
     setForm((prev) => ({ ...prev, [key]: value }))
@@ -108,7 +109,7 @@ const Login = () => {
             </Box>
             <Box className="flex justify-center items-center mb-3">
 
-              <Button handler={LoginHandler} title={"Login"}></Button>
+              <BasicButtons handler={LoginHandler} title={"Login"} />
             </Box>
 
 

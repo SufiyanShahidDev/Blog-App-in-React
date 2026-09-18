@@ -1,7 +1,7 @@
 
 import { Box, Paper, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import GoogleButtons from '../../Components/ContinueWithGoogleBtn'
+import GoogleButtons from '../../components/ContinueWithGoogleBtn'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
@@ -37,7 +37,7 @@ const Signup = () => {
   })
 
 
-  const handleInputChange = (value, key) => {
+  const handleInputChange = (key, value) => {
     console.log("fn working...", value)
 
     setForm((prev) => ({ ...prev, [key]: value }))
