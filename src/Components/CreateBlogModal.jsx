@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Input from "../components/Input";
 import ButtonCmp from "../components/Button";
-import { db } from "../firebase/config.js";
+import { auth, db } from "../firebase/config.js";
 import { addDoc, collection, doc, serverTimestamp, setDoc } from "firebase/firestore";
-import { userId } from "./ProtectedRoute.jsx";
+// import { userId } from "./ProtectedRoute.jsx";
 import { uploadImageToCloudinary } from "../../helper/helper.js";
 
 const style = {
@@ -40,6 +40,14 @@ export default function CreateBlogModal() {
     console.log(data);
     //  return
     try {
+
+      const userId = auth.currentUser?.uid;
+      if (!userId) {
+        console.log("User is not logged in");
+        return;
+      }
+
+
       await addDoc(collection(db, "blogs"), {
 
         blogImgUrl: url,
