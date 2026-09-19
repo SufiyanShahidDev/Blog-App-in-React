@@ -22,17 +22,12 @@ const Login = () => {
   })
 
   const handleInputChange = (key, value) => {
-    console.log("fn working...", value);
 
     setForm((prev) => ({ ...prev, [key]: value }))
 
   }
 
   const LoginHandler = async () => {
-    console.log("Login handler is working..", form);
-
-    console.log(form);
-
 
     try {
 

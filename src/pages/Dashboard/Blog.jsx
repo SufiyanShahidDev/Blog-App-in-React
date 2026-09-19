@@ -13,8 +13,6 @@ const Blog = () => {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
         const uid = user.uid;
-
-        console.log("user", user);
         setUser(user)
 
         // ...
@@ -25,8 +23,6 @@ const Blog = () => {
       }
     });
   };
-
-  console.log(user);
 
 
 

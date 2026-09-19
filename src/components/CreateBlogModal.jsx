@@ -66,8 +66,6 @@ export default function CreateBlogModal() {
 
   const postBlogHandler = async () => {
     try {
-      // console.log("post blog handler is working!");
-      // console.log(blogForm);
 
       const imgUrl = await uploadImageToCloudinary(blogForm.file);
 

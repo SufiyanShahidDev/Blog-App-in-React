@@ -24,12 +24,12 @@ const pages = [
 
 function Navbar({ user }) {
     const logoutHandler = async () => {
-        console.log("logout handler is workign..");
+        console.log("logout handler is working..");
 
         try {
             const userLogout = await signOut(auth);
         } catch (error) {
-            console.log("Error aya");
+            console.log("user found");
         }
     };
 

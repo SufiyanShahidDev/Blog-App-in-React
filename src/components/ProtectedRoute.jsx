@@ -15,7 +15,6 @@ const ProtectedRoute = ({ children }) => {
                 // https://firebase.google.com/docs/reference/js/auth.user
                 const userId = user.uid;
 
-                console.log("user", user);
                 setUser(user)
 
                 // ...
@@ -42,7 +41,6 @@ const ProtectedRoute = ({ children }) => {
     }
 
     if (user) {
-        console.log("janai user milgaya.. ", user);
 
         return children
         // return <Navigate to="/" />

@@ -12,7 +12,6 @@ import { auth, db } from '../../firebase/config.js'
 
 
 export const saveDataIntoDB = async (name = "", data) => {
-  console.log(data)
 
   try {
     await setDoc(doc(db, "users", data.uid), {
@@ -38,14 +37,13 @@ const Signup = () => {
 
 
   const handleInputChange = (key, value) => {
-    console.log("fn working...", value)
+    
 
     setForm((prev) => ({ ...prev, [key]: value }))
   }
 
 
   const signupHandler = async () => {
-    console.log("Signup handler is working..", form)
 
     try {
 

@@ -8,8 +8,6 @@ import { db } from "../../firebase/config.js";
 const Home = () => {
   const [allBlogs, setAllBlogs] = React.useState([]);
 
-  console.log("All Blogs:", allBlogs);
-
   const getBlogsData = async () => {
     try {
       const querySnapshot = await getDocs(
@@ -20,8 +18,6 @@ const Home = () => {
         id: doc.id,
         ...doc.data(),
       }));
-
-      console.log("Firestore Blogs:", blogs);
 
       setAllBlogs(blogs);
     } catch (error) {

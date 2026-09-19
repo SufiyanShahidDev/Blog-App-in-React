@@ -80,7 +80,6 @@ export default function BlogCard({ data, getBlogsData }) {
 
   // Delete blog
   const deleteHandler = async (blogId) => {
-    console.log("Deleting blog:", blogId);
 
     try {
       await deleteDoc(doc(db, "blogs", blogId));
@@ -123,9 +122,6 @@ export default function BlogCard({ data, getBlogsData }) {
       console.log(error.message);
     }
   };
-
-  console.log("BlogCard Data:", data);
-  console.log("Current User ID:", userId);
 
   return (
     <>
