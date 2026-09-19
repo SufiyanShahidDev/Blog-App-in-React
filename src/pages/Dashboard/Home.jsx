@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar";
 import BlogCard from "../../components/BlogCard";
 
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/config";
+import { db } from "../../firebase/config.js";
 
 const Home = () => {
   const [allBlogs, setAllBlogs] = React.useState([]);
